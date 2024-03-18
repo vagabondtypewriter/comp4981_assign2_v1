@@ -76,13 +76,14 @@ static void parse_arguments(const char *buffer, char **command, char ***argument
     while(buffer[i] != '\0')
     {
         // Skip whitespace characters
-        while(buffer[i] == ' ' || buffer[i] == '\n' || buffer[i] == '\t')
+        int condition_flag = 1;
+        while((buffer[i] == ' ' || buffer[i] == '\n' || buffer[i] == '\t') && condition_flag == 1)
         {
             i++;
             space_encountered = 1;
             if(buffer[i] == '\0')
             {
-                break;
+                condition_flag = 0;
             }
         }
 
@@ -126,7 +127,6 @@ static void parse_arguments(const char *buffer, char **command, char ***argument
             if(arg_count > MAX_ARGUMENTS)
             {
                 fprintf(stderr, "Exceeded maximum number of arguments\n");
-                break;
             }
         }
     }
@@ -190,7 +190,6 @@ static void handle_client(int client_socket, Session *session)
         else if(strncmp(command, "exit", 4) == 0)
         {
             printf("Exiting...\n");
-            break;    // Exit loop and close connection
         }
         else
         {
