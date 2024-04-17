@@ -1,0 +1,5 @@
+/home/kiefer/testerino/comp4981_assign2_v1/build/CMakeFiles/client.dir
+/home/kiefer/testerino/comp4981_assign2_v1/build/CMakeFiles/server.dir
+/home/kiefer/testerino/comp4981_assign2_v1/build/CMakeFiles/format.dir
+/home/kiefer/testerino/comp4981_assign2_v1/build/CMakeFiles/edit_cache.dir
+/home/kiefer/testerino/comp4981_assign2_v1/build/CMakeFiles/rebuild_cache.dir
